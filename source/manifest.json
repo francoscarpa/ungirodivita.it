@@ -1,0 +1,51 @@
+{
+  "name": "Franco Scarpa’s personal website",
+  "short_name": "Franco Scarpa",
+  "lang": "en-US",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#ffd000",
+  "background_color": "#000",
+  "icons": [
+    {
+      "src": "android-chrome-192x192.png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "favicon-16x16.png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "favicon-32x32.png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "mstile-70x70.png",
+      "sizes": "70x70"
+    },
+    {
+      "src": "mstile-144x144.png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "mstile-150x150.png",
+      "sizes": "150x150"
+    },
+    {
+      "src": "mstile-310x150.png",
+      "sizes": "310x150"
+    },
+    {
+      "src": "mstile-310x310.png",
+      "sizes": "310x310"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>{{ title }}</title>
+      <meta name="description" content="{{ description }}">
+      <link rel="manifest" href="/manifest.json">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,800&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/style.css">
+      <meta name="mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="application-name" content="Franco Scarpa">
+      <meta name="apple-mobile-web-app-title" content="Franco Scarpa">
+      <meta name="theme-color" content="#000">
+      <meta name="msapplication-navbutton-color" content="#000">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <meta name="msapplication-starturl" content="/">
+
+      <link rel="icon" sizes="192x192" href="/android-chrome-192x192.png">
+      <link rel="apple-touch-icon" sizes="192x192" href="/android-chrome-192x192.png">
+      <link rel="icon" sizes="512x512" href="/android-chrome-512x512.png">
+      <link rel="apple-touch-icon" sizes="512x512" href="/android-chrome-512x512.png">
+      <link rel="icon" sizes="180x180" href="/apple-touch-icon.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+      <link rel="icon" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="apple-touch-icon" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="icon" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="apple-touch-icon" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" sizes="70x70" href="/mstile-70x70.png">
+      <link rel="apple-touch-icon" sizes="70x70" href="/stile-70x70.png">
+      <link rel="icon" sizes="144x144" href="/mstile-144x144.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/mstile-144x144.png">
+      <link rel="icon" sizes="150x150" href="/mstile-150x150.png">
+      <link rel="apple-touch-icon" sizes="150x150" href="/mstile-150x150.png">
+      <link rel="icon" sizes="310x150" href="/mstile-310x150.png">
+      <link rel="apple-touch-icon" sizes="310x150" href="/mstile-310x150.png">
+      <link rel="icon" sizes="310x310" href="/mstile-310x310.png">
+      <link rel="apple-touch-icon" sizes="310x310" href="/mstile-310x310.png">
+   </head>
+
+   <body>
+            <nav>
+               <a href="/"><img src="/imgs/screw.svg" alt="Logo del sito “Un Giro Di Vita”"></a>
+               {%- for mainPage in collections.mainMenuPages -%}
+                  <a href={{ mainPage.url }} {% if page.url == mainPage.url %} class="active"{% endif %}>{{ mainPage.data.nameDisplayed }}</a>
+               {%- endfor -%}
+            </nav>
+            <header>
+               <h1>{{ h1 }}</h1>
+               {% if h2 %}
+                  <h2>{{ h2 }}</h2>
+               {% endif %}
+            </header>
+         <main>
+            {{ content | safe }}
+         </main>
+         <footer id="blackFooter">
+               <p>Questo sito è stato realizzato da <a href="https://francoscarpa.com">Franco Scarpa</a>
+               </p>
+               <p>
+                  <a href="/privacyPolicy/">Privacy policy</a> / <a href="/contact/">Contatti</a>
+               </p>
+               <p><a href="#">Seguimi su Instagram</a></p>
+         </footer>
+         {% include "script.html" %}
+      </body>
+
+</html>

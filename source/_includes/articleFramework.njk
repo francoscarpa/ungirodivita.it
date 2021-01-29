@@ -1,0 +1,13 @@
+---
+layout: framework.njk
+---
+<p class="metadata underH1 metadataInArticleOrPost">
+   <a href="/blog/">Blog</a> » {{ h1 }}</p>
+<p class="metadata metadataInArticleOrPost">
+   <span>{{ date.getFullYear() + "." + (date.getMonth() + 1) + "." + date.getDate() }}</span>
+   {% if updated %}
+      • <span>🔄</span>
+      <span>{{updated}}</span>
+   {% endif %}
+</p>
+{{ content | safe }}

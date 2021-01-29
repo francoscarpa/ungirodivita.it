@@ -1,0 +1,22 @@
+---
+layout: framework.njk
+title: Blog - Un Giro Di Vita
+tags: mainMenuPage
+order: 2
+nameDisplayed: Blog
+description: Gli articoli di Franco Scarpa, autore del sito ungirodivita.it, in cui egli parla della sua esperienza alla ricerca di uno stile di vita migliore seguente precise “vie”.
+h1: Blog
+h2: Articoli, riflessioni e pensieri personali
+---
+{%- for post in collections.articles | reverse -%}
+   <p class="metadata">
+      <span>{{post.date.getFullYear() + "." + (post.date.getMonth() + 1) + "." + post.date.getDate()}}</span>
+      {% if post.data.updated %}
+         • <span>🔄</span>
+         <span>{{post.data.updated}}</span>
+      {% endif %}
+   </p>
+   <p class="link">
+      <a href="{{ post.url }}">{{ post.data.h1 }}</a>
+   </p>
+{%- endfor -%}

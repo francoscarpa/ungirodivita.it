@@ -1,0 +1,26 @@
+---
+layout: framework.njk
+title: Accessibility - Franco Scarpa
+h1: Accessibility
+h2: Everyone’s welcome, none’s excluded
+---
+<p class="underH1">Accessibility means developing software that people, including those with physical disabilities, can use. This website welcomes everyone. My effort to make it accessible focuses both on the web performances, aesthetic, and content sides.</p>
+
+<p>What does make a website “fast”? In my opinion, a speedy website loads quickly and provides a smooth UX. A program could have great UIs, but a slow loading would be an obstacle. On the other hand, the software could load instantly, but an awful UX would prevent a user from coming back.</p>
+
+<p>This website is static. It’s blazing fast, and poor access to the network is not a big deal. Being built from scratch, I wrote every bit of code behind these Web pages, without libraries nor frameworks.</p>
+
+<p>The number of web requests is another fundamental factor in web performances. This website stays away from calling resources like fonts, frameworks, and libraries. The absence of JavaScript code (apart from that for the service worker) provides to show the bareness of this “home on the Web.” The compression of the source code further reduces the size of the pages. Web-safe fonts suit well.</p>
+
+<p>This site can even work offline. A service worker ensures the “<a href="https://res.cloudinary.com/practicaldev/image/fetch/s--e6WNQnnX--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://bit.ly/3ly1UHc">downasaur</a>” will never annoy you. This characteristic contributes to makes this website a full-fledged <a href="https://web.dev/progressive-web-apps/">PWA</a> (Progressive Web App): it’s fast, reliable, and installable.</p>
+
+<p>This website is responsive, so it fits any screen size. It uses HTML’s semantic elements:</p>
+
+<ul>
+   <li>The <code>nav</code> element contains the navigation menu.</li>
+   <li>The <code>header</code> element contains the <code>H1</code> and/or <code>H2</code> headings of the page.</li>
+   <li>The <code>main</code> element holds the chief content.</li>
+   <li>The <code>footer</code> contains info related to the website and me, its author.</li>
+</ul>
+
+<p>The content follows a hierarchical composition; every page presents an <code>H1</code> element, followed by a potential <code>H2</code>, <code>H3</code>, etc. Colors guarantee adequate contrast.</p>

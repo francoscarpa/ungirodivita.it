@@ -1,0 +1,19 @@
+---
+layout: framework.njk
+renderData:
+  photo: {{ photo }}
+h2: Post
+---
+<p class="metadata underH1 metadataInArticleOrPost">
+   <a href="/notes/">Notes</a> » {{ h1 }}</p>
+<p class="metadata metadataInArticleOrPost">
+   <span>✍🏻</span>
+   <span>{{ date.getFullYear() + "." + (date.getMonth() + 1) + "." + date.getDate() }}</span>
+   {% if updated %}
+      • <span>🔄</span>
+      <span>{{updated}}</span>
+   {% endif %}
+</p>
+{{ content | safe }}
+
+{% include "contact.html" %}
